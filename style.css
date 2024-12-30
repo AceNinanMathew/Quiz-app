@@ -1,0 +1,220 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url("https://directlinedev.com/media/services/service/background/background_11.wide.jpeg");
+}
+
+header {
+    display: flex;
+    align-items: center; /* Center items vertically */
+    justify-content: space-between;
+    padding: 0 50px; /* Add padding to keep content away from the edges */
+    height: 150px; /* Define a fixed height for consistent alignment */
+}
+
+.logoDiv {
+    width: 120px; /* Define a specific width */
+    height: 120px; /* Define a specific height */
+    overflow: hidden; /* Hide any overflow if the image is too big */
+    display: flex;
+    align-items: center; /* Center image vertically in its container */
+}
+
+.logo-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.nav-list {
+    display: flex;
+    align-items: center; /* Ensure items are centered vertically */
+    height: 100%; /* Match the height of the header for consistent alignment */
+}
+
+.list {
+    margin: 0 40px; /* Reduce the horizontal margin for better spacing */
+    list-style: none;
+}
+
+.link {
+    font-size: 1.7rem;
+    text-decoration: none;
+    color: aliceblue;
+    font-weight: 500;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 13px;
+    transition: all .3s ease;
+}
+.link:hover,#home-link{
+    color: #FEA323;
+    filter: drop-shadow(0 0 1px #FEA323);
+}
+#home{
+    padding: 1% 3% 2% 3%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#home .board h2{
+    text-align: center;
+    color: #bcbcbc;
+    font-size: 2rem;
+    padding-top: 35px;
+}
+.board{
+    width: 70%;
+    height: 540px;
+    background-image: url("https://png.pngtree.com/thumb_back/fw800/background/20231202/pngtree-gritty-charcoal-chalk-texture-and-ink-dark-board-image_13820922.png");
+    background-size: contain;
+    background-position: center top;
+    background-repeat: no-repeat;
+    text-align: center;
+    display: flex; /* Add this */
+    justify-content: center; /* Add this */
+    align-items: center; /* Add this */
+    text-align: center;
+    position: relative;
+}
+#start-button{
+    font-size: 1.4rem; /* Optionally adjust button size */
+    padding: 9px 15px; /* Adjust padding if needed */
+}
+#head{
+    position: absolute;
+    top: 30%;
+}
+.board p{
+    padding: 40px;
+    font-size: 1.5rem;
+    color: #FEA323;
+    font-family: "Brush Script MT", cursive;
+}
+.optionlist{
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 150px;
+    place-content: center;
+    place-items: center;
+}
+.option{
+    list-style: none;
+    color: #bcbcbc;
+    font-weight: 500;
+    font-size: 1.2rem;
+    font-family: "Brush Script MT", cursive;
+}
+/* Hide the default radio button */
+.custom-radio input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+/* Create the custom radio button */
+.custom-radio .checkmark {
+    position: relative;
+    height: 20px;
+    width: 20px;
+    background-color: #eee;
+    border-radius: 50%; /* Make it circular */
+    display: inline-block;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+/* When the radio button is checked, change styles */
+.custom-radio input[type="radio"]:checked + .checkmark {
+    background-color: #FEA323;
+    border: 2px solid #FEA323;
+}
+
+/* Add a visual check (inner circle) when checked */
+.custom-radio .checkmark::after {
+    content: "";
+    position: absolute;
+    display: none;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border-radius: 50%;
+}
+
+/* Show the inner circle when the radio is checked */
+.custom-radio input[type="radio"]:checked + .checkmark::after {
+    display: block;
+}
+.btn1{
+    margin-top: 16px;
+    margin-right: 5px;
+}
+.btn2{
+    margin-top: 16px;
+    margin-right: 5px;
+}
+.btn3{
+    margin-top: 16px;
+}
+
+
+@media (max-width: 480px) {
+    .nav-list{
+        display: none;
+    }
+    header {
+        justify-content: center;
+    }
+    #home .board h2{
+        font-size: 1.5rem;
+        padding-top: 40px;
+        color: rgb(189, 189, 189);
+    }
+    .board{
+        background-image: none;
+        width: 100%;
+    }
+    .board p{
+        font-size: 1.75rem;
+    }
+    .optionlist{
+        gap: 100px;
+    }
+    .option{
+        font-size: 1.4rem;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 992px) {
+    .nav-list{
+        display: none;
+    }
+    header {
+        justify-content: center;
+    }
+    #home .board h2{
+        font-size: 2.2rem;
+        padding-top: 0px;
+        color: rgb(189, 189, 189);
+    }
+    .board{
+        background-image: none;
+        width: 100%;
+    }
+    .board p{
+        font-size: 2.2rem;
+    }
+    .optionlist{
+        gap: 150px;
+    }
+    .option{
+        font-size: 1.8rem;
+    }
+}
